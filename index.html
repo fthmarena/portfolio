@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Personal Portfolio of Fathima Rena">
+<title>FATHIMA RENA </title>
+<style>
+/* CSS Variables for Black and Beige Theme */
+:root {
+--bg-color: #F5F5F5;
+--text-color: #36454F;
+--accent-color: #000080 ; /* Black for accents */
+--focus-outline: 2px dashed #36454F;
+}
+/* Smooth scrolling for navigation [cite: 18] */
+html {
+scroll-behavior: smooth;
+}
+/* Base Typography and Colors [cite: 13] */
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--bg-color);
+color: var(--text-color);
+margin: 0;
+padding: 0;
+line-height: 1.6;
+}
+h1, h2, h3 {
+color: var(--accent-color);
+font-weight: 400;
+}
+/* Interactive Elements & Accessibility [cite: 18, 21, 22] */
+a {
+color: var(--text-color);
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+color: var(--accent-color);
+text-decoration: underline;
+}
+a:focus, button:focus, input:focus {
+outline: var(--focus-outline);
+outline-oƯset: 4px;
+}
+/* Layout & Navigation [cite: 10] */
+header {
+padding: 1.5rem 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid rgba(245, 239, 235, 0.1);
+position: sticky;
+top: 0;
+background-color: var(--bg-color);
+z-index: 1000;
+}
+.logo {
+font-size: 1.5rem;
+font-weight: bold;
+color: var(--accent-color);
+}
+nav ul {
+list-style: none;
+display: flex;
+gap: 1rem;
+margin: 0;
+padding: 0;
+}
+/* Main Content Structure [cite: 6] */
+main {
+padding: 0 5%;
+}
+section {
+padding: 5rem 0;
+
+min-height: 60vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+/* Buttons [cite: 18] */
+.btn {
+display: inline-block;
+padding: 0.8rem 1.5rem;
+border: 1px solid var(--accent-color);
+color: var(--bg-color);
+background-color: var(--accent-color);
+font-weight: bold;
+border-radius: 4px;
+cursor: pointer;
+transition: all 0.3s ease;
+margin-top: 1.5rem;
+}
+.btn:hover, .btn:focus {
+background-color: transparent;
+color: var(--accent-color);
+}
+/* Skills Grid [cite: 7] */
+.skills-container {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+margin-top: 2rem;
+}
+.skill-tag {
+border: 1px solid var(--accent-color);
+padding: 0.5rem 1.2rem;
+border-radius: 20px;
+font-size: 0.95rem;
+background-color: rgba(214, 195, 167, 0.05);
+}
+/* Projects Grid [cite: 8] */
+.projects-grid {
+
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+margin-top: 2rem;
+}
+.project-card {
+border: 1px solid rgba(245, 239, 235, 0.2);
+padding: 2rem;
+border-radius: 8px;
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.project-card:hover {
+transform: translateY(-5px);
+border-color: var(--accent-color);
+}
+/* Contact Section [cite: 9] */
+.contact-links {
+display: flex;
+flex-direction: column;
+gap: 1.2rem;
+margin-top: 2rem;
+font-size: 1.1rem;
+}
+footer {
+text-align: center;
+padding: 2rem;
+border-top: 1px solid rgba(245, 239, 235, 0.1);
+margin-top: 2rem;
+font-size: 0.9rem;
+color: rgba(245, 239, 235, 0.6);
+}
+/* Responsiveness & Media Queries */
+@media (max-width: 768px) {
+header {
+flex-direction: column;
+gap: 1rem;
+padding: 1rem 5%;
+}
+
+nav ul {
+flex-wrap: wrap;
+justify-content: center;
+gap: 1rem;
+}
+section {
+padding: 3.5rem 0;
+}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">PORTFOLIO</div>
+<nav aria-label="Main Navigation">
+<ul>
+<li><a href="#about">About Me</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section id="about">
+<h1>Hi, I'm Fathima Rena</h1>
+<h2></h2>
+<p style="max-width: 600px; margin-top: 1rem; font-size: 1.1rem;">
+Hi, I’m Fathima Rena, a first-year Computer Science and Engineering student at Vimal Jyothi Engineering College, Kannur (Chemberi). I am passionate
+about technology and interested in programming and web development.
+</p>
+<div>
+<a href="#projects" class="btn">View My Work</a>
+</div>
+</section>
+<section id="skills">
+
+<h2>Skills & Expertise</h2>
+<p>Here are the technologies and tools I frequently work with:</p>
+<div class="skills-container">
+<span class="skill-tag">HTML</span>
+<span class="skill-tag">CSS</span>
+<span class="skill-tag">JavaScript</span>
+<span class="skill-tag">Python</span>
+<span class="skill-tag">Linux</span>
+</div>
+</section>
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects-grid">
+<div class="project-card">
+<h3>Automated Student Bus Attendence System</h3>
+<p>SmartRide is a web-based student bus attendance system that replaces manual roll-calls with barcode scanning of student ID cards. It automatically records morning boarding and compares it with evening scans to detect if any student who boarded in the morning did not return, ensuring accurate and efficient tracking without manual effort.</p>
+</div>
+</section>
+<section id="contact">
+<h2>Get In Touch</h2>
+<p>I'm currently open to new opportunities, collaborations, or just a quick chat. Feel free to connect with me using the links
+below!</p>
+<div class="contact-links">
+<a href="mailto:fthmarena@gmail.com">fthmarena@gmail.com</a>
+
+<a href="www.linkedin.com/in/fathima-rena-53918337a">LinkedIn Profile</a>
+<a href="https://github.com/fthmarena">Github</a>
+<a href="https://s
+
+<footer>
+<p>©️ 2026 Portfolio</p>
+</footer>
+
+</html>
